@@ -1,0 +1,44 @@
+/* some style */
+.cell {
+    background-color: white;
+    border-style: inset;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+}
+
+.cell.alive {
+    background-color: blue;
+}
+
+.current .cell {
+    width: 20px;
+    height: 20px;
+}
+
+.old {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    overflow: auto;
+    background-color: whitesmoke;
+    padding: 8px;
+    padding-right: 0;
+}
+
+.round {
+    padding-top: 10px;    
+    padding-bottom: 10px;
+}
+
+.round a:link {    
+    color: blue;
+    text-decoration: none;
+    font-variant: small-caps;
+}
+
+.timeout {
+    padding-top: 10px;
+}
