@@ -15,8 +15,8 @@ cljs.core.swap_BANG_.call(null,history,cljs.core.conj,state);
 return cljs.core.swap_BANG_.call(null,state,demo.game.next_state);
 });
 demo.control.slider = (function demo$control$slider(param,state,value,min,max){
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.timeout","div.timeout",1893861324),"Timeout: ",new cljs.core.Keyword(null,"timeout","timeout",-318625318).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,state)),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"type","type",1174270348),"range",new cljs.core.Keyword(null,"value","value",305978217),value,new cljs.core.Keyword(null,"min","min",444991522),min,new cljs.core.Keyword(null,"max","max",61366548),max,new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (p1__25183_SHARP_){
-return cljs.core.swap_BANG_.call(null,state,cljs.core.assoc,param,p1__25183_SHARP_.target.value);
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.timeout","div.timeout",1893861324),"Timeout: ",new cljs.core.Keyword(null,"timeout","timeout",-318625318).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,state)),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"type","type",1174270348),"range",new cljs.core.Keyword(null,"value","value",305978217),value,new cljs.core.Keyword(null,"min","min",444991522),min,new cljs.core.Keyword(null,"max","max",61366548),max,new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (p1__14083_SHARP_){
+return cljs.core.swap_BANG_.call(null,state,cljs.core.assoc,param,p1__14083_SHARP_.target.value);
 })], null)], null)], null);
 });
 demo.control.time_updater = (function demo$control$time_updater(history,state){

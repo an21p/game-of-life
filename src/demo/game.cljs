@@ -10,9 +10,7 @@
 (defn alive?
   "Checks whether the key is in the cells"
   [cells key]
-  (if (empty? (s/intersection #{key} cells))
-    false
-    true))
+  (not (empty? (s/intersection #{key} cells))))
 
 (defn get-neighbours
   "Returns the keys of nearby cells"
@@ -50,6 +48,7 @@
   "Produces the next state"
   [state]
   (let [possible (possible-alive (:cells state))
-        new-cells (update-cells state possible)
-        new-state (assoc state :round (inc (:round state)))]
-    (assoc new-state :cells new-cells)))
+        new-cells (update-cells state possible)]
+    (as-> state s
+      (assoc s :round (inc (:round s)))
+      (assoc s :cells new-cells))))

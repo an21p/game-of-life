@@ -2,35 +2,35 @@
 goog.provide('demo.game');
 goog.require('cljs.core');
 goog.require('clojure.set');
-demo.game.transformations = clojure.set.difference.call(null,cljs.core.into.call(null,cljs.core.PersistentHashSet.EMPTY,(function (){var iter__4523__auto__ = (function demo$game$iter__24456(s__24457){
+demo.game.transformations = clojure.set.difference.call(null,cljs.core.into.call(null,cljs.core.PersistentHashSet.EMPTY,(function (){var iter__4523__auto__ = (function demo$game$iter__14070(s__14071){
 return (new cljs.core.LazySeq(null,(function (){
-var s__24457__$1 = s__24457;
+var s__14071__$1 = s__14071;
 while(true){
-var temp__5457__auto__ = cljs.core.seq.call(null,s__24457__$1);
+var temp__5457__auto__ = cljs.core.seq.call(null,s__14071__$1);
 if(temp__5457__auto__){
 var xs__6012__auto__ = temp__5457__auto__;
 var x = cljs.core.first.call(null,xs__6012__auto__);
-var iterys__4519__auto__ = ((function (s__24457__$1,x,xs__6012__auto__,temp__5457__auto__){
-return (function demo$game$iter__24456_$_iter__24458(s__24459){
-return (new cljs.core.LazySeq(null,((function (s__24457__$1,x,xs__6012__auto__,temp__5457__auto__){
+var iterys__4519__auto__ = ((function (s__14071__$1,x,xs__6012__auto__,temp__5457__auto__){
+return (function demo$game$iter__14070_$_iter__14072(s__14073){
+return (new cljs.core.LazySeq(null,((function (s__14071__$1,x,xs__6012__auto__,temp__5457__auto__){
 return (function (){
-var s__24459__$1 = s__24459;
+var s__14073__$1 = s__14073;
 while(true){
-var temp__5457__auto____$1 = cljs.core.seq.call(null,s__24459__$1);
+var temp__5457__auto____$1 = cljs.core.seq.call(null,s__14073__$1);
 if(temp__5457__auto____$1){
-var s__24459__$2 = temp__5457__auto____$1;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__24459__$2)){
-var c__4521__auto__ = cljs.core.chunk_first.call(null,s__24459__$2);
+var s__14073__$2 = temp__5457__auto____$1;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__14073__$2)){
+var c__4521__auto__ = cljs.core.chunk_first.call(null,s__14073__$2);
 var size__4522__auto__ = cljs.core.count.call(null,c__4521__auto__);
-var b__24461 = cljs.core.chunk_buffer.call(null,size__4522__auto__);
-if((function (){var i__24460 = (0);
+var b__14075 = cljs.core.chunk_buffer.call(null,size__4522__auto__);
+if((function (){var i__14074 = (0);
 while(true){
-if((i__24460 < size__4522__auto__)){
-var y = cljs.core._nth.call(null,c__4521__auto__,i__24460);
-cljs.core.chunk_append.call(null,b__24461,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null));
+if((i__14074 < size__4522__auto__)){
+var y = cljs.core._nth.call(null,c__4521__auto__,i__14074);
+cljs.core.chunk_append.call(null,b__14075,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null));
 
-var G__24462 = (i__24460 + (1));
-i__24460 = G__24462;
+var G__14076 = (i__14074 + (1));
+i__14074 = G__14076;
 continue;
 } else {
 return true;
@@ -38,29 +38,29 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__24461),demo$game$iter__24456_$_iter__24458.call(null,cljs.core.chunk_rest.call(null,s__24459__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14075),demo$game$iter__14070_$_iter__14072.call(null,cljs.core.chunk_rest.call(null,s__14073__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__24461),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14075),null);
 }
 } else {
-var y = cljs.core.first.call(null,s__24459__$2);
-return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),demo$game$iter__24456_$_iter__24458.call(null,cljs.core.rest.call(null,s__24459__$2)));
+var y = cljs.core.first.call(null,s__14073__$2);
+return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),demo$game$iter__14070_$_iter__14072.call(null,cljs.core.rest.call(null,s__14073__$2)));
 }
 } else {
 return null;
 }
 break;
 }
-});})(s__24457__$1,x,xs__6012__auto__,temp__5457__auto__))
+});})(s__14071__$1,x,xs__6012__auto__,temp__5457__auto__))
 ,null,null));
-});})(s__24457__$1,x,xs__6012__auto__,temp__5457__auto__))
+});})(s__14071__$1,x,xs__6012__auto__,temp__5457__auto__))
 ;
 var fs__4520__auto__ = cljs.core.seq.call(null,iterys__4519__auto__.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [(-1),(0),(1)], null)));
 if(fs__4520__auto__){
-return cljs.core.concat.call(null,fs__4520__auto__,demo$game$iter__24456.call(null,cljs.core.rest.call(null,s__24457__$1)));
+return cljs.core.concat.call(null,fs__4520__auto__,demo$game$iter__14070.call(null,cljs.core.rest.call(null,s__14071__$1)));
 } else {
-var G__24463 = cljs.core.rest.call(null,s__24457__$1);
-s__24457__$1 = G__24463;
+var G__14077 = cljs.core.rest.call(null,s__14071__$1);
+s__14071__$1 = G__14077;
 continue;
 }
 } else {
@@ -76,18 +76,14 @@ return iter__4523__auto__.call(null,new cljs.core.PersistentVector(null, 3, 5, c
  * Checks whether the key is in the cells
  */
 demo.game.alive_QMARK_ = (function demo$game$alive_QMARK_(cells,key){
-if(cljs.core.empty_QMARK_.call(null,clojure.set.intersection.call(null,cljs.core.PersistentHashSet.createAsIfByAssoc([key]),cells))){
-return false;
-} else {
-return true;
-}
+return (!(cljs.core.empty_QMARK_.call(null,clojure.set.intersection.call(null,cljs.core.PersistentHashSet.createAsIfByAssoc([key]),cells))));
 });
 /**
  * Returns the keys of nearby cells
  */
 demo.game.get_neighbours = (function demo$game$get_neighbours(key){
-return cljs.core.map.call(null,(function (p1__24464_SHARP_){
-return cljs.core.mapv.call(null,cljs.core._PLUS_,key,p1__24464_SHARP_);
+return cljs.core.map.call(null,(function (p1__14078_SHARP_){
+return cljs.core.mapv.call(null,cljs.core._PLUS_,key,p1__14078_SHARP_);
 }),demo.game.transformations);
 });
 /**
@@ -108,16 +104,16 @@ return false;
 var cells = new cljs.core.Keyword(null,"cells","cells",-985166822).cljs$core$IFn$_invoke$arity$1(state);
 var neighbours = demo.game.get_neighbours.call(null,key);
 var alive_neighbours = cljs.core.filter.call(null,((function (cells,neighbours){
-return (function (p1__24465_SHARP_){
-return demo.game.alive_QMARK_.call(null,cells,p1__24465_SHARP_);
+return (function (p1__14079_SHARP_){
+return demo.game.alive_QMARK_.call(null,cells,p1__14079_SHARP_);
 });})(cells,neighbours))
 ,neighbours);
 return ((cljs.core._EQ_.call(null,cljs.core.count.call(null,alive_neighbours),(3))) || (((demo.game.alive_QMARK_.call(null,cells,key)) && (cljs.core._EQ_.call(null,cljs.core.count.call(null,alive_neighbours),(2))))));
 }
 });
 demo.game.update_cells = (function demo$game$update_cells(state,possible){
-return cljs.core.into.call(null,cljs.core.PersistentHashSet.EMPTY,cljs.core.filter.call(null,(function (p1__24466_SHARP_){
-return demo.game.should_live_QMARK_.call(null,state,p1__24466_SHARP_);
+return cljs.core.into.call(null,cljs.core.PersistentHashSet.EMPTY,cljs.core.filter.call(null,(function (p1__14080_SHARP_){
+return demo.game.should_live_QMARK_.call(null,state,p1__14080_SHARP_);
 }),possible));
 });
 /**
@@ -126,8 +122,9 @@ return demo.game.should_live_QMARK_.call(null,state,p1__24466_SHARP_);
 demo.game.next_state = (function demo$game$next_state(state){
 var possible = demo.game.possible_alive.call(null,new cljs.core.Keyword(null,"cells","cells",-985166822).cljs$core$IFn$_invoke$arity$1(state));
 var new_cells = demo.game.update_cells.call(null,state,possible);
-var new_state = cljs.core.assoc.call(null,state,new cljs.core.Keyword(null,"round","round",2009433328),(new cljs.core.Keyword(null,"round","round",2009433328).cljs$core$IFn$_invoke$arity$1(state) + (1)));
-return cljs.core.assoc.call(null,new_state,new cljs.core.Keyword(null,"cells","cells",-985166822),new_cells);
+var s = state;
+var s__$1 = cljs.core.assoc.call(null,s,new cljs.core.Keyword(null,"round","round",2009433328),(new cljs.core.Keyword(null,"round","round",2009433328).cljs$core$IFn$_invoke$arity$1(s) + (1)));
+return cljs.core.assoc.call(null,s__$1,new cljs.core.Keyword(null,"cells","cells",-985166822),new_cells);
 });
 
 //# sourceMappingURL=game.js.map

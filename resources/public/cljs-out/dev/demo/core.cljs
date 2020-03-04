@@ -26,6 +26,14 @@
    [control/get-controls history app-state initial-state]
    [:div.current
     [grid/get-grid app-state]]
+   [:div.rules
+    [:h3 "Rules"]
+    [:ol
+     [:li "Any live cell with fewer than two live neighbours dies, as if by underpopulation."]
+     [:li "Any live cell with two or three live neighbours lives on to the next generation."]
+     [:li "Any live cell with more than three live neighbours dies, as if by overpopulation."]
+     [:li "Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+"]]]
    [:div.old 
     (for [n (range 0 4)]
       ^{:key n}  [grid/get-step history n])]])
