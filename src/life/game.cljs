@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks demo.game
+(ns ^:figwheel-hooks life.game
   (:require
    [clojure.set :as s]))
 

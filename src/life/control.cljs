@@ -1,6 +1,6 @@
-(ns ^:figwheel-hooks demo.control
+(ns ^:figwheel-hooks life.control
   (:require
-   [demo.game :as game]))
+   [life.game :as game]))
 
 (def min-timeout 100)
 (def max-timeout 1000)

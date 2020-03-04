@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks demo.grid
+(ns ^:figwheel-hooks life.grid
   (:require
     [clojure.set :as s]))
 

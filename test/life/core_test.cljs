@@ -1,5 +1,5 @@
-(ns demo.core-test
+(ns life.core-test
   (:require
    [cljs.test :refer-macros [deftest is testing]]
-   ;;[demo.core :refer [multiply]]
+   ;;[life.core :refer [multiply]]
    ))

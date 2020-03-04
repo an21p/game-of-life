@@ -1,10 +1,10 @@
-(ns ^:figwheel-hooks demo.core
+(ns ^:figwheel-hooks life.core
   (:require
    [clojure.string]
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
-   [demo.control :as control]
-   [demo.grid :as grid]))
+   [life.control :as control]
+   [life.grid :as grid]))
 
 ;; initial state used for reset
 (def initial-state {:timer nil
