@@ -28,18 +28,17 @@
 
 (defn toggle-timer
   [history state]
-  (let [timer (:timer @state)
-        new-timer (if (not (= timer nil))
-                    (js/clearInterval timer)
-                    (time-updater history state))]
-    (swap! state assoc :timer new-timer)))
+  (let [timer (:timer @state)]
+    (if (not (= timer nil))
+      (js/clearInterval timer)
+      (time-updater history state))))
 
 (defn get-controls
   [history state new-state]
   [:div.controls
    [:div
     [:input {:type "button" :value (if (:timer @state) "Pause" "Play")
-             :on-click #(toggle-timer history state)}]
+             :on-click #(swap! state assoc :timer (toggle-timer history state))}]
     [:input {:type "button" :value "Next Round"
              :on-click #(step history state)}]
     [:input {:type "button" :value "Reset"

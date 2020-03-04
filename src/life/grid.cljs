@@ -4,21 +4,19 @@
 
 (defn add-cell
   [state key]
-  (let [new-state (update-in @state [:cells] conj key)]
-    (reset! state new-state)))
+  (update-in @state [:cells] conj key))
 
 (defn remove-cell
   [state key]
-  (let [new-state (update-in @state [:cells] disj key)]
-    (reset! state new-state)))
+  (update-in @state [:cells] disj key))
 
 (defn get-cell
   [state key]
   (if (empty? (s/intersection #{key} (:cells @state)))
     ^{:key key} [:span.cell
-                 {:on-click #(add-cell state key)}]
+                {:on-click #(reset! state (add-cell state key))}]
     ^{:key key} [:span.cell.alive
-                 {:on-click #(remove-cell state key)}]))
+                 {:on-click #(reset! state (remove-cell state key))}]))
 
 (defn get-historical-cell
   [cells key]
