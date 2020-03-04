@@ -10,7 +10,7 @@
 (defn alive?
   "Checks whether the key is in the cells"
   [cells key]
-  (not (empty? (s/intersection #{key} cells))))
+  (seq (s/intersection #{key} cells)))
 
 (defn get-neighbours
   "Returns the keys of nearby cells"

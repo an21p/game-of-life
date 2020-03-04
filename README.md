@@ -1,10 +1,10 @@
-# demo
+# Game of Life
 
-FIXME: Write a one-line description of your library/project.
+A ClojureScript implementation of Conways Game of Life
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+Created as a part of exploring ClojureScript and re-agent
 
 ## Development
 
