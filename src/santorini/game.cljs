@@ -1,6 +1,7 @@
 (ns ^:figwheel-hooks santorini.game
   (:require
-   [clojure.set :as s]))
+   ;;[clojure.set :as s]
+   ))
 
 ;; How do I note the players?
 ;; - key: name value: #{[x,y]}
