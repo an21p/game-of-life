@@ -4,7 +4,8 @@
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
    [life.control :as control]
-   [life.grid :as grid]))
+   [life.grid :as grid]
+   [santorini.core :as santorini]))
 
 ;; initial state used for reset
 (def initial-state {:timer nil
@@ -18,7 +19,7 @@
 (defonce history (atom '()))
 
 (defn get-app-element []
-  (gdom/getElement "app"))
+  (gdom/getElement "life"))
 
 (defn app-component []
   [:div 
@@ -32,8 +33,7 @@
      [:li "Any live cell with fewer than two live neighbours dies, as if by underpopulation."]
      [:li "Any live cell with two or three live neighbours lives on to the next generation."]
      [:li "Any live cell with more than three live neighbours dies, as if by overpopulation."]
-     [:li "Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-"]]]
+     [:li "Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction."]]]
    [:div.old 
     (for [n (range 0 4)]
       ^{:key n}  [grid/get-step history n])]])
@@ -45,11 +45,12 @@
   (when-let [el (get-app-element)]
     (mount el)))
 
-
 ;; conditionally start your application based on the presence of an "app" element
 ;; this is particularly helpful for testing this ns without launching the app
 (mount-app-element)
+(santorini/mount-app-element)
 
 ;; specify reload hook with ^;after-load metadata
 (defn ^:after-load on-reload []
-  (mount-app-element))
+  (mount-app-element)
+  (santorini/mount-app-element))
