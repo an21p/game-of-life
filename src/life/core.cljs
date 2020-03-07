@@ -4,8 +4,7 @@
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
    [life.control :as control]
-   [life.grid :as grid]
-   [santorini.core :as santorini]))
+   [life.grid :as grid]))
 
 ;; initial state used for reset
 (def initial-state {:timer nil
@@ -48,9 +47,7 @@
 ;; conditionally start your application based on the presence of an "app" element
 ;; this is particularly helpful for testing this ns without launching the app
 (mount-app-element)
-(santorini/mount-app-element)
 
 ;; specify reload hook with ^;after-load metadata
 (defn ^:after-load on-reload []
-  (mount-app-element)
-  (santorini/mount-app-element))
+  (mount-app-element))
